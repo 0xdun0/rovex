@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root,
+  .dark {
+    --background: 224 47% 6%; /* fundo escuro padrao da aplicacao (#080b11) */
+    --foreground: 210 40% 98%; /* texto claro legivel */
+    --card: 224 47% 9%; /* superficie de cards elevada */
+    --card-foreground: 210 40% 98%; /* texto de cards */
+    --popover: 224 47% 6%; /* popovers e menus escuros */
+    --popover-foreground: 210 40% 98%; /* texto de popovers */
+    --primary: 158 64% 45%; /* esmeralda rovex oficial (#29bc86 / equilibrio tatico) */
+    --primary-foreground: 0 0% 100%; /* contraste branco puro */
+    --primary-accessible: 158 64% 45%; /* conformidade de contraste */
+    --primary-accessible-foreground: 0 0% 100%; /* texto acessivel */
+    --brand: 158 64% 45%; /* cor da marca rovex */
+    --brand-foreground: 0 0% 100%; /* texto da marca */
+    --secondary: 220 15% 18%; /* fundo secundario escuro */
+    --secondary-foreground: 210 40% 98%; /* texto secundario */
+    --muted: 220 15% 18%; /* cinza suave */
+    --muted-foreground: 215 18% 70%; /* texto atenuado */
+    --accent: 158 64% 45%; /* destaque profissional */
+    --accent-foreground: 0 0% 100%; /* texto no destaque */
+    --destructive: 0 72% 55%; /* vermelho para falhas criticas */
+    --destructive-foreground: 210 40% 98%; /* texto destrutivo */
+    --border: 220 15% 22%; /* bordas discretas */
+    --input: 220 15% 22%; /* campos de entrada */
+    --ring: 158 64% 45%; /* anel de foco tatico */
+    --severity-critical: 0 72% 55%; /* severidade critica */
+    --severity-critical-foreground: 0 0% 100%; /* contraste */
+    --severity-high: 22 96% 58%; /* severidade alta */
+    --severity-high-foreground: 0 0% 100%; /* contraste */
+    --severity-medium: 42 95% 58%; /* severidade media */
+    --severity-medium-foreground: 36 100% 12%; /* contraste */
+    --severity-low: 217 90% 65%; /* severidade baixa */
+    --severity-low-foreground: 0 0% 100%; /* contraste */
+    --severity-informational: 215 12% 60%; /* informativo */
+    --severity-informational-foreground: 0 0% 100%; /* contraste */
+    --todo: 0 75% 60%; /* marcador todo */
+    --todo-foreground: 0 0% 100%; /* contraste todo */
+    --radius: 0.5rem; /* cantos arredondados */
+    --chart-1: 220 70% 50%; /* paleta de graficos */
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --sidebar-background: 222 36% 8%; /* tom chumbo profundo (#0d121c) integrado ao painel */
+    --sidebar-foreground: 210 40% 95%; /* texto da barra lateral */
+    --sidebar-primary: 158 64% 45%; /* acento verde na barra */
+    --sidebar-primary-foreground: 0 0% 100%; /* texto no acento */
+    --sidebar-accent: 222 30% 14%; /* hover sutil integrado */
+    --sidebar-accent-foreground: 210 40% 98%; /* texto no hover */
+    --sidebar-border: 220 15% 16%; /* divisoria executiva sutil */
+    --sidebar-ring: 158 64% 45%; /* foco na barra */
+    --status-completed: 142 71% 50%; /* status completado */
+    --status-completed-foreground: 0 0% 100%;
+    --status-in-progress: 42 95% 58%; /* status em progresso */
+    --status-in-progress-foreground: 36 100% 12%;
+    --status-on-hold: 215 12% 55%; /* status aguardando */
+    --status-on-hold-foreground: 0 0% 100%;
+    --status-blocked: 0 72% 55%; /* status bloqueado */
+    --status-blocked-foreground: 0 0% 100%;
+    --status-archived: 224 30% 60%; /* status arquivado */
+    --status-archived-foreground: 0 0% 100%;
+    --code-background: 222 47% 8%; /* blocos de codigo escuros */
+    --code-foreground: 210 40% 96%;
+    --code-comment: 215 20% 68%;
+    --code-punctuation: 210 30% 84%;
+    --code-keyword: 272 90% 80%;
+    --code-string: 142 76% 72%;
+    --code-function: 199 89% 76%;
+    --code-number: 36 100% 72%;
+    --code-attr: 185 85% 72%;
+    --code-tag: 0 90% 76%;
+    --code-operator: 210 40% 90%;
+    --code-regex: 330 86% 78%;
+    --code-selection: 224 40% 22%;
+  }
+
+  .light {
+    --background: 220 16% 96.5%; /* off-white acinzentado confortavel (#f5f6f8), elimina emissao excessiva de luz */
+    --foreground: 225 6% 14%; /* cinza escuro confortavel (#202124), suaviza a leitura sem fadiga visual */
+    --card: 220 14% 98.5%; /* superficies de card em branco quebrado suave (#fafbfd), nunca branco puro #ffffff */
+    --card-foreground: 225 6% 14%;
+    --popover: 220 14% 98.5%; /* menus e popovers suaves (#fafbfd) */
+    --popover-foreground: 225 6% 14%;
+    --primary: 158 64% 38%; /* esmeralda rovex com contraste nitido */
+    --primary-foreground: 0 0% 100%;
+    --primary-accessible: 158 64% 35%;
+    --primary-accessible-foreground: 0 0% 100%;
+    --brand: 158 64% 38%;
+    --brand-foreground: 0 0% 100%;
+    --secondary: 220 13% 91.5%; /* tom secundario neutro e repousante (#eaedf2) */
+    --secondary-foreground: 225 6% 14%;
+    --muted: 220 13% 91.5%;
+    --muted-foreground: 220 10% 40%; /* contraste balanceado (#5f6368), leitura suave sem cegar */
+    --accent: 158 64% 38%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 80% 48%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 84%; /* divisorias nitidas e sem ofuscamento (#d2d6df) */
+    --input: 220 13% 84%; /* campos com contorno preciso */
+    --ring: 158 64% 38%;
+    --severity-critical: 0 72% 42%;
+    --severity-critical-foreground: 0 0% 100%;
+    --severity-high: 22 96% 45%;
+    --severity-high-foreground: 0 0% 100%;
+    --severity-medium: 38 95% 42%;
+    --severity-medium-foreground: 0 0% 100%;
+    --severity-low: 217 90% 48%;
+    --severity-low-foreground: 0 0% 100%;
+    --severity-informational: 215 14% 45%;
+    --severity-informational-foreground: 0 0% 100%;
+    --todo: 0 72% 48%;
+    --todo-foreground: 0 0% 100%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 220 14% 94%; /* sidebar suave com tom de descanso (#eef1f5) */
+    --sidebar-foreground: 225 6% 14%; /* texto cinza escuro legivel (#202124) */
+    --sidebar-primary: 158 64% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 89%;
+    --sidebar-accent-foreground: 225 6% 14%;
+    --sidebar-border: 220 13% 84%;
+    --sidebar-ring: 158 64% 38%;
+    --status-completed: 142 71% 35%;
+    --status-completed-foreground: 0 0% 100%;
+    --status-in-progress: 42 95% 40%;
+    --status-in-progress-foreground: 0 0% 100%;
+    --status-on-hold: 215 14% 45%;
+    --status-on-hold-foreground: 0 0% 100%;
+    --status-blocked: 0 72% 42%;
+    --status-blocked-foreground: 0 0% 100%;
+    --status-archived: 224 30% 32%;
+    --status-archived-foreground: 0 0% 100%;
+    --code-background: 220 15% 92.5%; /* bloco de codigo suave (#e8ebf0) */
+    --code-foreground: 225 6% 14%;
+    --code-comment: 215 14% 45%;
+    --code-punctuation: 215 16% 32%;
+    --code-keyword: 258 65% 42%;
+    --code-string: 150 72% 24%;
+    --code-function: 221 83% 38%;
+    --code-number: 24 95% 36%;
+    --code-attr: 197 95% 30%;
+    --code-tag: 0 72% 40%;
+    --code-operator: 222 47% 25%;
+    --code-regex: 330 80% 38%;
+    --code-selection: 220 14% 86%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    background-color: hsl(var(--background)); /* impede tela branca no canvas do navegador */
+    color: hsl(var(--foreground));
+    color-scheme: dark; /* instrui a renderizacao nativa a usar paleta escura */
+  }
+  html.light {
+    color-scheme: light; /* suporte a modo claro explicito */
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: hsl(var(--background)); /* fundo escuro solido garantido */
+    min-height: 100vh;
+    /* evita scroll horizontal acidental sem quebrar position: sticky */
+    overflow-x: clip;
+  }
+  main, .min-w-0-cascade > * {
+    min-width: 0;
+  }
+}
+
+/* ── Scrollbars customizadas ─────────────────────────────────────────
+   Finas, na cor da marca e visiveis durante rolagem ou arraste */
+@layer base {
+  html,
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  html.scrolling,
+  html.scrolling * {
+    scrollbar-color: hsl(var(--brand) / 0.55) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    transition: background-color 0.25s ease;
+  }
+  html.scrolling::-webkit-scrollbar-thumb,
+  html.scrolling ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--brand) / 0.55);
+  }
+  html.scrolling::-webkit-scrollbar-thumb:hover,
+  html.scrolling ::-webkit-scrollbar-thumb:hover,
+  ::-webkit-scrollbar-thumb:active {
+    background-color: hsl(var(--brand) / 0.8);
+  }
+}
+
+@layer utilities {
+  @keyframes flash {
+    0% { background-color: hsl(var(--primary) / 0); }
+    25% { background-color: hsl(var(--primary) / 0.3); }
+    100% { background-color: hsl(var(--primary) / 0); }
+  }
+
+  .flash-highlight {
+    animation: flash 2s ease-out;
+  }
+}
+
+/* estilo dos marcadores TODO: barra lateral vermelha e texto destacado */
+.todo-block {
+  border-left: 4px solid hsl(var(--todo));
+  padding-left: 0.6rem;
+}
+.todo-text {
+  color: hsl(var(--todo));
+  font-weight: 600;
+}
+
+/* cores dos badges de severidade (reutilizavel em preview, html e pdf) */
+.sev-critical { background: hsl(var(--severity-critical)); color: hsl(var(--severity-critical-foreground)); }
+.sev-high { background: hsl(var(--severity-high)); color: hsl(var(--severity-high-foreground)); }
+.sev-medium { background: hsl(var(--severity-medium)); color: hsl(var(--severity-medium-foreground)); }
+.sev-low { background: hsl(var(--severity-low)); color: hsl(var(--severity-low-foreground)); }
+.sev-informational { background: hsl(var(--severity-informational)); color: hsl(var(--severity-informational-foreground)); }
+
+/* gradiente sutil da marca para cabecalho de relatorio */
+.brand-gradient-light {
+  background: linear-gradient(180deg, hsl(142 71% 45% / 0.10) 0%, hsl(0 0% 100%) 75%);
+}
+.brand-gradient-dark {
+  background: linear-gradient(180deg, hsl(158 64% 45% / 0.08) 0%, hsl(224 47% 6%) 75%); /* gradiente esmeralda suave sem neon */
+}
+
+/* utilitario para ocultar elementos durante arraste */
+.dnd-dragging .group\/section .add-section-button {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { overflow: visible !important; }
+}
+
+/* oculta os overlays de desenvolvimento do nextjs (icone N e popups) */
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dialog-overlay] {
+  display: none !important; /* remove completamente do visual */
+}

@@ -16,8 +16,26 @@
 
 <br />
 
-<!-- Screenshots reais da plataforma: adicione seus prints em public/screenshots/banner.png -->
-<!-- <img src="public/screenshots/banner.png" alt="Rovex Platform Overview" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" /> -->
+<!-- Hero Banner Principal -->
+<img src="public/screenshots/banner.png" alt="Rovex Platform Overview" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+
+<br /><br />
+
+<!-- Layout Dual com Duas Fotos Lado a Lado -->
+<table border="0" width="100%" cellspacing="0" cellpadding="4">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <img src="public/screenshots/project-explorer.png" alt="Project Explorer Master-Detail" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
+      <br />
+      <sub><b>Project Explorer</b> — Navegação Master-Detail minimalista, painel contextual de métricas e filtros por tipo.</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="public/screenshots/mcp.png" alt="Model Context Protocol (MCP) Server" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
+      <br />
+      <sub><b>AI Native (MCP Server)</b> — Conexão direta com agentes autônomos (Claude Code, Cursor, OpenCode) para relatórios em streaming.</sub>
+    </td>
+  </tr>
+</table>
 
 <br />
 

@@ -16,26 +16,8 @@
 
 <br />
 
-<!-- Hero Banner Principal -->
-<img src="public/images/rovex-banner.png" alt="Rovex Autonomous Operations Platform" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
-
-<br /><br />
-
-<!-- Layout Dual com Duas Fotos Lado a Lado (Preparado para Screenshots Futuras) -->
-<table border="0" width="100%" cellspacing="0" cellpadding="4">
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="public/images/rovex-preview-left.png" alt="Telemetria de IA & Análise de Vulnerabilidades" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
-      <br />
-      <sub><b>AI Telemetry & Vulnerability Matrix</b> — Telemetria de IA, radar CVSS v3.1 e catálogo de evidências.</sub>
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="public/images/rovex-preview-right.png" alt="Compilação de Relatórios & Editor Markdown" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
-      <br />
-      <sub><b>Executive Report Engine</b> — Editor Markdown por blocos, renderização em tempo real e exportação multi-formato.</sub>
-    </td>
-  </tr>
-</table>
+<!-- Screenshots reais da plataforma: adicione seus prints em public/screenshots/banner.png -->
+<!-- <img src="public/screenshots/banner.png" alt="Rovex Platform Overview" width="100%" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" /> -->
 
 <br />
 

@@ -101,7 +101,7 @@ O servidor MCP expõe cinco habilidades modulares sob demanda para economia de c
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/rovex/rovex.git
+git clone https://github.com/0xdun0/rovex.git
 cd rovex
 
 # 2. Instalar dependências com pnpm
@@ -158,7 +158,7 @@ opencode mcp add rovex --url http://localhost:9002/api/mcp
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/rovex/rovex.git
+git clone https://github.com/0xdun0/rovex.git
 cd rovex
 
 # 2. Install dependencies
@@ -212,7 +212,7 @@ Configuración en clientes con soporte HTTP MCP:
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/rovex/rovex.git
+git clone https://github.com/0xdun0/rovex.git
 cd rovex
 
 # 2. Instalar dependencias con pnpm

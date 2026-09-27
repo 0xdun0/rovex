@@ -1592,10 +1592,10 @@ export default function DocumentationPage() {
                 </div>
                 <p className="text-xs">
                   {isPt
-                    ? 'Container Docker rodando sob usuário sem privilégios (nextjs:1001). Vinculação em localhost por padrão (127.0.0.1). Previews de temas renderizados em iframe com sandbox restrito.'
+                    ? 'Container Docker sob usuário sem privilégios (nextjs:1001). Vinculação em 0.0.0.0:1400 acessível localmente e via IP da rede (HOST_BIND configurável). Previews em iframes isolados.'
                     : isEs
-                    ? 'Contenedor Docker ejecutado con usuario no-root (nextjs:1001). Conexión en localhost (127.0.0.1) por defecto. Previews en iframes aislados.'
-                    : 'Unprivileged non-root Docker execution (nextjs:1001). Localhost bind by default (127.0.0.1). Theme visualizer isolated in sandboxed iframes.'}
+                    ? 'Contenedor Docker ejecutado con usuario no-root (nextjs:1001). Conexión en 0.0.0.0:1400 accesible en local y vía IP de red (HOST_BIND configurable). Previews en iframes aislados.'
+                    : 'Unprivileged non-root Docker execution (nextjs:1001). 0.0.0.0:1400 network bind accessible locally and across host LAN (HOST_BIND configurable). Theme visualizer isolated in sandboxed iframes.'}
                 </p>
               </div>
             </div>

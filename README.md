@@ -110,7 +110,9 @@ pnpm install
 # 3. Iniciar o ambiente de desenvolvimento
 pnpm dev
 
-# Acesse no navegador: http://127.0.0.1:1400
+# Acesse no navegador:
+# - Local: http://127.0.0.1:1400
+# - Rede / Host IP: http://<seu-ip-local>:1400 (ex: http://192.168.15.103:1400)
 ```
 
 Execução alternativa via script orquestrador:
@@ -167,7 +169,9 @@ pnpm install
 # 3. Launch platform
 pnpm dev
 
-# Navigate to: http://127.0.0.1:1400
+# Navigate in your browser:
+# - Localhost: http://127.0.0.1:1400
+# - Network / Host LAN IP: http://<your-local-ip>:1400 (e.g. http://192.168.15.103:1400)
 ```
 
 ---
@@ -221,7 +225,9 @@ pnpm install
 # 3. Iniciar servidor local
 pnpm dev
 
-# Abrir en el navegador: http://127.0.0.1:1400
+# Abrir en el navegador:
+# - Local: http://127.0.0.1:1400
+# - Red / Host IP: http://<tu-ip-local>:1400 (ej: http://192.168.15.103:1400)
 ```
 
 ---

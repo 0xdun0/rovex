@@ -86,7 +86,7 @@ Rovex employs multiple layers of isolation to prevent attackers from compromisin
    - The production container creates a dedicated system group `nodejs` (GID 1001) and unprivileged user `nextjs` (UID 1001). The application binary (`node server.js`) runs with zero root privileges, restricting any hypothetical container escape.
 2. **Theme Preview Iframe Sandboxing**:
    - The interactive theme visualizer (`theme-preview-doc.ts`) renders preview documents inside an `<iframe>` with strict sandbox flags. This isolates custom CSS and document scripts from accessing application session tokens, LocalStorage, or parent window contexts.
-3. **Localhost Binding by Default**:
-   - Both `app.py` and `deploy.sh` bind exclusively to `127.0.0.1` by default rather than `0.0.0.0`. This prevents unintended exposure to public network interfaces during mobile assessments on foreign LANs or Wi-Fi.
+3. **Network Interface Binding & Isolation**:
+   - By default, `package.json`, `app.py`, and `deploy.sh` bind to `0.0.0.0:1400`, enabling seamless multi-device testing and team access across the local host LAN IP (e.g. `http://192.168.x.x:1400`) as well as loopback (`http://127.0.0.1:1400`). When operating on untrusted public Wi-Fi networks, operators can lock binding down strictly to loopback by setting `HOST_BIND=127.0.0.1`.
 4. **Standalone Binary Minimization**:
    - Production Docker builds compile via Next.js standalone mode (`NEXT_STANDALONE=true`), bundling only the strictly necessary production files. The development source code (`src/`), build scripts, and package managers are discarded from the final container layer.

@@ -22,6 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Comprehensive English, Brazilian Portuguese, and Spanish coverage across all project templates (`ptpl-1` to `ptpl-5`).
   - Strict language fallback `t[language] ?? t["en"]` eliminating crashes on non-standard locales.
   - Purged hardcoded strings and language leaks in modal dialogs, template pickers, and finding editors.
+- **Network Interface & Port Standardization**:
+  - Default development and container port standardized to `1400`.
+  - Default binding to `0.0.0.0:1400` across `package.json`, `app.py`, and `deploy.sh` for simultaneous loopback (`127.0.0.1:1400`) and LAN host IP access, with explicit `HOST_BIND` environment isolation support.
 
 ### Fixed
 - Fixed critical `TypeError: reading 'title'` in `VulnerabilityTemplatePicker` caused by locale shorthand mismatches.

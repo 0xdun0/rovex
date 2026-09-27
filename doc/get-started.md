@@ -50,7 +50,9 @@ pnpm dev
 python3 app.py
 ```
 
-Access the application in your browser at `http://127.0.0.1:1400`.
+Access the application in your browser:
+- **Local Machine**: `http://127.0.0.1:1400`
+- **LAN / Host Network**: `http://<your-local-ip>:1400` (e.g. `http://192.168.15.103:1400`)
 
 ---
 

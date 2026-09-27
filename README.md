@@ -61,18 +61,15 @@
 
 1. [🇧🇷 Português (Brasil)](#-português-brasil)
    - [Visão Geral](#visão-geral)
-   - [Destaques da Plataforma](#destaques-da-plataforma)
-   - [Arquitetura & IA Nativa (MCP)](#arquitetura--ia-nativa-mcp)
+   - [Principais Recursos](#principais-recursos)
    - [Instalação & Execução Rápida](#instalação--execução-rápida)
 2. [🇺🇸 English](#-english)
    - [System Overview](#system-overview)
    - [Key Highlights](#key-highlights)
-   - [Architecture & Native AI (MCP)](#architecture--native-ai-mcp)
    - [Quick Start & Deployment](#quick-start--deployment)
 3. [🇪🇸 Español](#-español)
    - [Visión General](#visión-general)
-   - [Capacidades Principais](#capacidades-principais)
-   - [Arquitectura e IA Nativa (MCP)](#arquitectura-e-ia-nativa-mcp)
+   - [Capacidades Principales](#capacidades-principales)
    - [Instalación & Inicio Rápido](#instalación--inicio-rápido)
 
 ---
@@ -81,33 +78,20 @@
 
 ### Visão Geral
 
-O **Rovex** é uma estação soberana e gratuita de engenharia de relatórios de pentest e gerenciamento de vulnerabilidades, projetada para consultorias de segurança ofensiva, red teams e pesquisadores independentes.
+O **Rovex** é uma plataforma soberana e gratuita de geração de relatórios de pentest e writeups, com gerenciamento integrado de vulnerabilidades. Projetada para consultorias de segurança ofensiva, red teams e pesquisadores independentes, opera em modelo **100% Local-First e zero telemetria**: seus achados, evidências e relatórios nunca saem da sua rede.
 
-Diferente de soluções corporativas pagas ou plataformas em nuvem que impõem taxas recorrentes por assento e colocam dados confidenciais de clientes em servidores de terceiros, o Rovex opera sob a premissa de **privacidade absoluta (100% Local-First)**, execução rápida em container único ou binário Node.js local, e compilação de alta fidelidade para **Word (`.docx`) nativo, PDF para impressão via CSS paged `@page`, HTML autocontido e Markdown limpo**.
+### Principais Recursos
 
-### Destaques da Plataforma
-
-- **Privacidade Soberana & Zero Telemetria**: Todos os relatórios, evidências fotográficas, credenciais e escopos de clientes permanecem estritamente dentro da sua infraestrutura.
-- **Editor Markdown por Seções**: Modos `Split`, `MD` e `Preview` com redimensionamento dinâmico e suporte completo a fórmulas e variáveis de modelo.
-- **Rastreador Nativo de Tarefas `[TODO: ...]`**: Identificação visual instantânea de itens pendentes no relatório com âncoras diretas para a seção correspondente.
+- **Pentests & Writeups**: Suporte nativo aos dois fluxos de trabalho com templates dedicados e identificadores semânticos padronizados.
+- **Privacidade Soberana & Zero Telemetria**: Execução ágil em container único ou binário Node.js local, sem envio de dados a nuvens externas.
+- **Editor Markdown por Seções**: Modos `Split`, `MD` e `Preview` com redimensionamento dinâmico e rastreador ativo de tarefas `[TODO: ...]`.
 - **Calculadora Automatizada CVSS v3.1**: Cálculo vetorial oficial de pontuação base, impacto e exploitabilidade com matrizes visuais de severidade.
-- **Exportadores de Documentos de Alto Padrão**:
-  - **Word Corporativo (`.docx`)**: Compilação AST OOXML nativa com capa executiva, sumário automático e chips coloridos de severidade.
-  - **PDF Executivo**: Regras paged `@page` A4 com controle de quebra de página e numeração dinâmica de rodapés.
-  - **HTML Autocontido**: Arquivo único com estilos embutidos pronto para apresentação ao cliente.
-- **Servidor MCP Nativo (Model Context Protocol)**: Conexão direta com assistentes de IA (Claude Code, Cursor, OpenCode) via endpoint HTTP de streaming.
-- **Central Técnica de Documentação (`Doc`)**: Hub interativo no menu lateral com paleta rápida de busca `⌘`, dicionário de variáveis de interpolação e guias operacionais.
-
-### Arquitetura & IA Nativa (MCP)
-
-O Rovex adota uma arquitetura de **Monólito Modular Moderno** em Next.js 15 e React 19, garantindo latência zero na escrita e eliminação de sobrecargas de microsserviços.
-
-O servidor MCP expõe cinco habilidades modulares sob demanda para economia de contexto dos modelos LLM:
-- `rovex-reports`: Roteamento mestre e ciclo de auditoria.
-- `rovex-report-structure`: Gramática de seções e tags de interpolação `{{findings.table}}` e `{{findings.details}}`.
-- `rovex-findings-workflow`: Estruturação de vulnerabilidades e anexação de evidências.
-- `rovex-cvss-scoring`: Convenções de pontuação CVSS v3.1.
-- `rovex-import`: Migração de anotações do Obsidian e GitBook com imagens preservadas.
+- **Exportação Multi-Formato Profissional**:
+  - **Word Corporativo (`.docx`)**: Compilação AST OOXML nativa com capa executiva, sumário dinâmico e tabelas nativas.
+  - **PDF Executivo**: Regras CSS `@page` tamanho A4 com controle rigoroso de quebras de página.
+  - **HTML Autocontido & Markdown**: Arquivo único com estilos embutidos pronto para apresentação ao cliente.
+- **IA Nativa (MCP Server)**: Servidor HTTP integrado com 14 ferramentas operacionais e 5 playbooks sob demanda (`rovex-reports`, `structure`, `findings`, `cvss`, `import`) para Claude Code, Cursor e OpenCode gerarem relatórios completos.
+- **Central Técnica de Documentação (`Doc`)**: Hub interativo com paleta rápida de busca Command `⌘`, dicionário de variáveis e guias de arquitetura.
 
 ### Instalação & Execução Rápida
 
@@ -138,35 +122,20 @@ python3 app.py
 
 ### System Overview
 
-**Rovex** is a sovereign, self-hosted, and free security reporting and vulnerability management platform tailored for offensive security consultants, enterprise red teams, and ethical hackers.
-
-Unlike proprietary cloud platforms that enforce per-seat subscription models and transfer sensitive vulnerability proof-of-concepts to external clouds, Rovex guarantees **strict local-first data isolation**, ultra-fast single-process execution, and publication-grade export to **Word (`.docx`) with native OOXML tables, paged PDF (`@page`), standalone single-file HTML, and GitHub-Flavored Markdown**.
+**Rovex** is a sovereign, free, and self-hosted platform for generating pentest reports and technical writeups, featuring integrated vulnerability management. Designed for offensive security consultancies, red teams, and independent researchers, it operates strictly **100% Local-First with zero telemetry**: your findings, proof-of-concepts, and client scopes never leave your network.
 
 ### Key Highlights
 
-- **Local-First & Zero Telemetry**: Confidential audit findings, target scopes, and proof-of-concept captures never leave your premises.
-- **Sectional Block Markdown Editor**: Flexible `Split` / `MD` / `Preview` editing with live table of contents and draggable split-pane dividers.
-- **Uppercase `[TODO: ...]` Tracking**: Active tasks are highlighted across editor sections and report preview panels with auto-scroll anchors.
-- **Automated CVSS v3.1 Vector Engine**: Exact mathematical computation of base severity, exploitability, and impact metrics with radar distributions.
+- **Pentests & Writeups**: Dedicated workflows for commercial engagements and CTF/lab writeups with standardized semantic IDs.
+- **Strict Data Sovereignty**: Ultra-fast single-process execution (Node.js or Docker) with zero external cloud dependencies.
+- **Sectional Markdown Block Editor**: `Split`, `MD`, and `Preview` modes with draggable dividers and uppercase `[TODO: ...]` tracking anchors.
+- **Automated CVSS v3.1 Engine**: Official vector math calculating base, impact, and exploitability scores in real-time.
 - **Multi-Format Publication Exporters**:
-  - **Native Word (`.docx`)**: Custom AST compiler building native tables of contents, branded covers, and vector severities.
-  - **Printable PDF**: High-precision `@page` CSS styling with automated running headers and footers.
-  - **Client HTML**: Standalone distributable client deliverable with integrated theme styles.
-- **Native MCP (Model Context Protocol) Server**: Connect coding assistants (Claude Code, Cursor, OpenCode) directly via `POST /api/mcp` for autonomous reporting.
-- **Interactive Documentation Hub**: Built-in `Doc` module with quick Command shortcut palette `⌘`, variable interpolation dictionary, and operational teardowns.
-
-### Architecture & Native AI (MCP)
-
-Built as a **Modern Modular Monolith** on Next.js 15, React 19, and Node.js 22 to ensure instant rendering without distributed network partitions.
-
-Connect your AI agent via MCP:
-```bash
-# Claude Code CLI
-claude mcp add --transport http rovex http://127.0.0.1:1400/api/mcp
-
-# OpenCode CLI
-opencode mcp add rovex --url http://127.0.0.1:1400/api/mcp
-```
+  - **Native Word (`.docx`)**: Custom AST OOXML engine with executive cover, live table of contents, and styled vulnerability tables.
+  - **Printable PDF**: High-precision `@page` A4 styling with automated running headers and page numbers.
+  - **Standalone HTML & Markdown**: Single self-contained file with embedded styles ready for client presentation.
+- **Native AI (MCP Server)**: Integrated streamable HTTP endpoint exposing 14 operational tools and 5 on-demand playbooks for autonomous LLM report authoring (Claude Code, Cursor, OpenCode).
+- **Interactive Documentation Hub (`Doc`)**: Built-in reference portal with quick Command `⌘` search, variable interpolation schemas, and architectural blueprints.
 
 ### Quick Start & Deployment
 
@@ -192,37 +161,20 @@ pnpm dev
 
 ### Visión General
 
-**Rovex** es una plataforma soberana, gratuita y autoalojada para la redacción de informes de pentest y la gestión estructurada de vulnerabilidades, creada para consultores de ciberseguridad ofensiva, equipos de red team y auditores de seguridad.
+**Rovex** es una plataforma soberana y gratuita de generación de informes de pentest y writeups técnicos, con gestión integrada de vulnerabilidades. Diseñada para consultoras de ciberseguridad ofensiva, red teams y auditores independientes, opera bajo el principio de **privacidad absoluta (100% Local-First y cero telemetría)**: los hallazgos críticos, capturas y credenciales nunca salen de tu red.
 
-A diferencia de soluciones comerciales cerradas que exigen cuotas mensuales por usuario y transfieren evidencias críticas a servidores externos, Rovex asegura **privacidad estricta y almacenamiento 100% local**, ejecución ágil sin telemetría y compilación a **Word (`.docx`) nativo, PDF paginado para impresión con `@page`, HTML independiente y Markdown estándar**.
+### Capacidades Principales
 
-### Capacidades Principais
-
-- **Cero Telemetría y Máxima Confidencialidad**: Los datos de clientes, capturas técnicas y vectores de ataque permanecen bajo tu exclusivo control.
-- **Editor Markdown por Secciones**: Modos de visualización `Split`, `MD` y `Preview` con divisores ajustables y resolución inmediata de variables.
-- **Seguimiento Integrado de Tareas `[TODO: ...]`**: Resaltado visual en rojo de elementos pendientes con navegación directa al bloque editable.
-- **Motor de Puntuación CVSS v3.1**: Cálculo exacto de métricas vectoriales y generación automática de tablas resumen de hallazgos.
+- **Pentests & Writeups**: Flujos de trabajo específicos para auditorías comerciales y writeups de laboratorios/CTF con IDs estandarizados.
+- **Privacidad Soberana**: Ejecución ágil en contenedor único o binario Node.js local sin dependencias en la nube.
+- **Editor Markdown por Secciones**: Modos `Split`, `MD` y `Preview` con divisores ajustables y seguimiento activo de tareas `[TODO: ...]`.
+- **Motor de Puntuación CVSS v3.1**: Cálculo vectorial oficial de severidad base, impacto y explotabilidad en tiempo real.
 - **Exportación Multi-Formato Profesional**:
-  - **Microsoft Word (`.docx`)**: Generador OOXML con portada corporativa, índice nativo y chips cromáticos de criticidad.
-  - **PDF Ejecutivo**: Regras CSS `@page` tamaño A4 con separación rigurosa de páginas y numeración corrida.
-  - **HTML Autocontenido**: Documento ejecutable en cualquier navegador sin dependencias de red.
-- **Servidor MCP Nativo**: Interfaz estándar de Model Context Protocol para asistir en la redacción con agentes de IA autónomos.
-- **Centro de Documentación Técnica (`Doc`)**: Buscador rápido con atajo Command `⌘`, referencia completa de campos de interpolación y manuales de arquitectura.
-
-### Arquitectura e IA Nativa (MCP)
-
-Diseñado como un **Monolito Modular Moderno** con Next.js 15, React 19 y TypeScript para ofrecer tiempos de respuesta ultrarrápidos.
-
-Configuración en clientes con soporte HTTP MCP:
-```jsonc
-{
-  "mcpServers": {
-    "rovex": {
-      "url": "http://127.0.0.1:1400/api/mcp"
-    }
-  }
-}
-```
+  - **Microsoft Word (`.docx`)**: Compilador AST OOXML con portada ejecutiva, índice nativo y tablas con estilo corporativo.
+  - **PDF Ejecutivo**: Regras CSS `@page` tamaño A4 con salto de página controlado y numeración corrida.
+  - **HTML Autocontenido & Markdown**: Documento único con estilos integrados listo para entrega al cliente.
+- **Servidor MCP Nativo**: Conexión HTTP directa con 14 herramientas y 5 manuales modulares para redacción con agentes de IA (Claude Code, Cursor, OpenCode).
+- **Centro Técnico de Documentación (`Doc`)**: Buscador rápido con atajo Command `⌘`, referencia de variables y guías de arquitectura.
 
 ### Instalación & Inicio Rápido
 

@@ -21,8 +21,8 @@
 
 <br /><br />
 
-<!-- Layout Dual com Duas Fotos Lado a Lado -->
-<table border="0" width="100%" cellspacing="0" cellpadding="4">
+<!-- Grid 2x2 com 4 Capturas Principais -->
+<table border="0" width="100%" cellspacing="0" cellpadding="6">
   <tr>
     <td width="50%" align="center" valign="top">
       <img src="public/screenshots/project-explorer.png" alt="Project Explorer Master-Detail" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
@@ -30,9 +30,21 @@
       <sub><b>Project Explorer</b> — Navegação Master-Detail minimalista, painel contextual de métricas e filtros por tipo.</sub>
     </td>
     <td width="50%" align="center" valign="top">
+      <img src="public/screenshots/evidence-vault.png" alt="Evidence Vault & CVSS Telemetry" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
+      <br />
+      <sub><b>Evidence Vault</b> — Catálogo de vulnerabilidades com trilho lateral de telemetria CVSS v3.1 e preview Markdown.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
       <img src="public/screenshots/mcp.png" alt="Model Context Protocol (MCP) Server" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
       <br />
       <sub><b>AI Native (MCP Server)</b> — Conexão direta com agentes autônomos (Claude Code, Cursor, OpenCode) para relatórios em streaming.</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <img src="public/screenshots/doc.png" alt="Interactive Documentation Hub" width="100%" style="border-radius: 8px; border: 1px solid #1e293b;" />
+      <br />
+      <sub><b>Documentation Hub</b> — Central técnica integrada na interface com busca rápida Command ⌘ e blueprints.</sub>
     </td>
   </tr>
 </table>

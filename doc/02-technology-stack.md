@@ -76,5 +76,5 @@ Rovex employs a **hybrid local-first storage architecture** that combines browse
 | **Container Engine** | Docker & Docker Compose compatible. Runs a 3-stage multi-stage build (`deps`, `builder`, `runner`). |
 | **Base Image** | Lightweight `node:22-alpine` minimal image (~180MB total final size). |
 | **Execution Security** | Executes exclusively as unprivileged user `nextjs` (UID 1001) and group `nodejs` (GID 1001). |
-| **Networking** | Default HTTP bind to `127.0.0.1:47474` (or `PORT=9002` in local dev). Configurable via `HOST_BIND` environment variable. |
+| **Networking** | Default HTTP bind to `127.0.0.1:1400`. Configurable via `HOST_BIND` and `PORT` environment variables. |
 | **Automation** | `deploy.sh` script providing automated dependency resolution, live BuildKit progress monitoring, and container health polling. |

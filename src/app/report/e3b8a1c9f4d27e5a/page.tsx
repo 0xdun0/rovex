@@ -1399,7 +1399,7 @@ export default function DocumentationPage() {
                 <ul className="text-xs space-y-1.5 list-disc list-inside">
                   <li><strong className="text-foreground">Docker Multi-Stage:</strong> Imagem leve baseada em <code>node:22-alpine</code> (~180MB).</li>
                   <li><strong className="text-foreground">Usuário Não-Root:</strong> Execução segura sob UID/GID 1001 (<code>nextjs:nodejs</code>).</li>
-                  <li><strong className="text-foreground">Porta Padrão:</strong> <code>127.0.0.1:47474</code> (Docker) ou <code>9002</code> (desenvolvimento).</li>
+                  <li><strong className="text-foreground">Porta Padrão:</strong> <code>127.0.0.1:1400</code> (desenvolvimento e produção).</li>
                   <li><strong className="text-foreground">Deploy Automatizado:</strong> Script <code>deploy.sh</code> com BuildKit e transição atômica.</li>
                 </ul>
               </div>
@@ -1531,14 +1531,14 @@ export default function DocumentationPage() {
                   className="absolute right-2 top-2 h-7 px-2 text-[11px] text-muted-foreground hover:text-foreground"
                   onClick={() =>
                     copyToClipboard(
-                      'claude mcp add --transport http rovex http://localhost:9002/api/mcp',
+                      'claude mcp add --transport http rovex http://127.0.0.1:1400/api/mcp',
                       'mcp-cli'
                     )
                   }
                 >
                   {copiedCode === 'mcp-cli' ? <Check className="h-3.5 w-3.5 text-primary" /> : <Copy className="h-3.5 w-3.5" />}
                 </Button>
-                <code>claude mcp add --transport http rovex http://localhost:9002/api/mcp</code>
+                <code>claude mcp add --transport http rovex http://127.0.0.1:1400/api/mcp</code>
               </div>
             </div>
           </div>
@@ -1684,10 +1684,10 @@ export default function DocumentationPage() {
             </div>
             <p className="text-xs">
               {isPt
-                ? 'Acesse http://localhost:9002 (ou http://127.0.0.1:47474 com Docker) e defina sua senha no primeiro acesso.'
+                ? 'Acesse http://127.0.0.1:1400 e defina sua senha no primeiro acesso.'
                 : isEs
-                ? 'Accede a http://localhost:9002 (o http://127.0.0.1:47474 en Docker) y configura tu contraseña en el primer inicio.'
-                : 'Access http://localhost:9002 (or http://127.0.0.1:47474 in Docker) and initialize your administrator account.'}
+                ? 'Accede a http://127.0.0.1:1400 y configura tu contraseña en el primer inicio.'
+                : 'Access http://127.0.0.1:1400 and initialize your administrator account.'}
             </p>
           </div>
         ),

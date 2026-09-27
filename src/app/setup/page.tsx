@@ -764,7 +764,7 @@ export default function SetupGuidePage() {
                       Endpoint Streamable HTTP do Servidor MCP:
                     </p>
                     <code className="text-primary font-bold block bg-muted p-2 rounded border border-border/60">
-                      POST http://localhost:9002/api/mcp
+                      POST http://127.0.0.1:1400/api/mcp
                     </code>
                   </div>
 

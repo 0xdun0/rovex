@@ -293,7 +293,7 @@ export default function McpPage() {
             <span className="text-[10px] font-mono uppercase text-muted-foreground font-semibold">{t.endpoint}</span>
             <div className="flex items-center gap-2">
               <code className="rounded-lg border border-border/70 bg-background px-3 py-1.5 font-mono text-xs text-foreground select-all break-all">
-                {endpoint || 'http://localhost:9002/api/mcp'}
+                {endpoint || 'http://127.0.0.1:1400/api/mcp'}
               </code>
               <Button size="sm" variant="outline" onClick={copyEndpointUrl} className="h-8 px-2.5 text-xs font-mono border-border/70 shrink-0">
                 {copiedEndpoint ? <Check className="h-3.5 w-3.5 text-primary" /> : <Copy className="h-3.5 w-3.5 text-muted-foreground" />}

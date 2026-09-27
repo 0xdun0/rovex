@@ -39,7 +39,7 @@
 
 <br />
 
-**[Documentação Técnica Completa / Full Technical Documentation](doc/README.md)** &bull; **[Hub Interativo no App (Doc)](http://localhost:9002/report/e3b8a1c9f4d27e5a)**
+**[Documentação Técnica Completa / Full Technical Documentation](doc/README.md)** &bull; **[Hub Interativo no App (Doc)](http://127.0.0.1:1400/report/e3b8a1c9f4d27e5a)**
 
 </div>
 
@@ -110,7 +110,7 @@ pnpm install
 # 3. Iniciar o ambiente de desenvolvimento
 pnpm dev
 
-# Acesse no navegador: http://localhost:9002
+# Acesse no navegador: http://127.0.0.1:1400
 ```
 
 Execução alternativa via script orquestrador:
@@ -148,10 +148,10 @@ Built as a **Modern Modular Monolith** on Next.js 15, React 19, and Node.js 22 t
 Connect your AI agent via MCP:
 ```bash
 # Claude Code CLI
-claude mcp add --transport http rovex http://localhost:9002/api/mcp
+claude mcp add --transport http rovex http://127.0.0.1:1400/api/mcp
 
 # OpenCode CLI
-opencode mcp add rovex --url http://localhost:9002/api/mcp
+opencode mcp add rovex --url http://127.0.0.1:1400/api/mcp
 ```
 
 ### Quick Start & Deployment
@@ -167,7 +167,7 @@ pnpm install
 # 3. Launch platform
 pnpm dev
 
-# Navigate to: http://localhost:9002
+# Navigate to: http://127.0.0.1:1400
 ```
 
 ---
@@ -202,7 +202,7 @@ Configuración en clientes con soporte HTTP MCP:
 {
   "mcpServers": {
     "rovex": {
-      "url": "http://localhost:9002/api/mcp"
+      "url": "http://127.0.0.1:1400/api/mcp"
     }
   }
 }
@@ -221,7 +221,7 @@ pnpm install
 # 3. Iniciar servidor local
 pnpm dev
 
-# Abrir en el navegador: http://localhost:9002
+# Abrir en el navegador: http://127.0.0.1:1400
 ```
 
 ---

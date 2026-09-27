@@ -43,14 +43,14 @@ PORT=8080 HOST_BIND=0.0.0.0 bash deploy.sh
 # Install dependencies
 pnpm install
 
-# Start development server (port 9002)
+# Start development server (port 1400)
 pnpm dev
 
 # Or launch via the Python runner
 python3 app.py
 ```
 
-Access the application in your browser at `http://localhost:9002`.
+Access the application in your browser at `http://127.0.0.1:1400`.
 
 ---
 

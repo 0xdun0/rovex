@@ -1,0 +1,15 @@
+services:
+  rovex:
+    image: ghcr.io/0xdun0/rovex:latest
+    # Para compilar localmente em vez de puxar a imagem remota, descomente a linha abaixo:
+    # build: .
+    container_name: rovex
+    restart: unless-stopped
+    ports:
+      - "1400:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOSTNAME=0.0.0.0
+    volumes:
+      - ./data:/app/data

@@ -1,10 +1,9 @@
 <div align="center">
 
 # ROVEX
-
-### Plataforma Soberana de Segurança Ofensiva & Relatórios Executivos
-### Sovereign Offensive Security Reporting & Vulnerability Management
-### Plataforma Soberana de Seguridad Ofensiva & Gestión de Informes
+### Segurança Ofensiva. Local. Privada. Sob Seu Controle.
+### Offensive Security. Local. Private. Under Your Control.
+### Seguridad Ofensiva. Local. Privada. Bajo Tu Control.
 
 [![Version](https://img.shields.io/badge/version-2.5.0-10b981.svg?style=flat-square)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/license-MIT-3b82f6.svg?style=flat-square)](LICENSE)
@@ -78,7 +77,8 @@
 
 ### Visão Geral
 
-O **Rovex** é uma plataforma soberana e gratuita de geração de relatórios de pentest e writeups, com gerenciamento integrado de vulnerabilidades. Projetada para consultorias de segurança ofensiva, red teams e pesquisadores independentes, opera em modelo **100% Local-First e zero telemetria**: seus achados, evidências e relatórios nunca saem da sua rede.
+O **Rovex** é uma plataforma gratuita para criação de relatórios de pentest e writeups, com gerenciamento integrado de vulnerabilidades. Voltada para consultorias de segurança ofensiva, equipes de Red Team e pesquisadores independentes, adota uma arquitetura **100% Local-First e zero telemetria**, garantindo que dados, evidências e relatórios permaneçam no ambiente do usuário, sem envio ou processamento por serviços externos.
+
 
 ### Principais Recursos
 
